@@ -9,4 +9,4 @@ OPTIONS=$2
 
 : "${NODE_NAME:?Variable not set or empty}"
 
-sudo K3S_TOKEN=SECRET k3s server --cluster-init --node-name="$NODE_NAME" $OPTIONS
+sudo K3S_TOKEN=SECRET k3s server --cluster-init --node-name="$NODE_NAME" --write-kubeconfig-mode=644 $OPTIONS
